@@ -12,6 +12,8 @@
 
 > 🚧 Preparing...
 
+<!-- 成果物 -->
+
 <!-- | **Specification Comparison Tool**      | 💡 計画中 / Planning     | 仕様書比較・差分管理ツール / Specification comparison and traceability tool.      |-| -->
 
 <!-- 
