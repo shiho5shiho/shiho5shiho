@@ -100,13 +100,10 @@ This experience strengthened my cross-cultural communication skills and broadene
 | -------------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |-------------|
 | **家族カルテ / Family Health Record** | 🚧 In Progress   | 家系図と家族の病歴を管理し、健康情報を未来へつなぐWebアプリ / Laravel application for preserving family medical history across generations. | https://github.com/shiho5shiho/pedigree-app|
 
-<!-- | **Specification Comparison Tool**      | 💡 計画中 / Planning     | 仕様書比較・差分管理ツール / Specification comparison and traceability tool.      |-| -->
+➡️ See full portfolio:
+./projects/README.md
 
-<!-- 
-| ✅ 完成 / Completed   | 
-| 🚧 開発中 / In Progress |
-| 💡 計画済 / Planned     |  -->
----
+
 
 # 🌐 言語 / Languages
 
