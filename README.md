@@ -2,11 +2,15 @@
 
 ## 「人の困りごとを、より良い仕組みで解決する。」
 
-**奥出 詩穂（Shiho Okude）**です。
+**奥出 詩穂（Shiho Okude）** です。
 
 製造業で品質保証として約8年間勤務し、品質保証で培った経験を活かしながら、**現場の課題をITで解決できるエンジニア**を目指しています。
 
-品質保証の仕事では、多くの部署や仕入先と関わりながら、製品を安定して届けるための仕組みづくりに携わってきました。
+企画・設計・製造・購買・国内外の仕入先など、多くの関係者と連携しながら、品質づくりや業務改善に取り組んできました。
+
+学生時代には約3年間アメリカで生活・留学し、異文化コミュニケーションや多様な価値観への理解を深めました。この経験は、現在の海外顧客や海外拠点との業務にも活かされています。
+
+異なる文化や価値観の中で学んだ経験は、相手の背景を理解し、自分の考えを分かりやすく伝える姿勢につながっています。
 
 その経験を通して、「品質を守ること」だけではなく、**人が働きやすくなる仕組みを考え、改善すること**にやりがいを感じるようになりました。
 
@@ -18,13 +22,17 @@
 
 I'm **Shiho Okude**.
 
-I have worked in Quality Assurance in the manufacturing industry for over eight years.
+I have worked in Quality Assurance in the manufacturing industry for approximately eight years. Building on this experience, I am working toward becoming **an engineer who solves real-world problems through technology**.
 
-By combining my Quality Assurance experience with software development, I aim to become an engineer who creates practical solutions for real-world problems.
+Throughout my career, I have collaborated with product planning, design, production, purchasing, and both domestic and overseas suppliers to improve product quality and streamline business processes.
 
-Working closely with multiple departments and suppliers has taught me that quality is not only about preventing defects, but also about building better systems that help people work more effectively.
+During my student years, I spent approximately three years living and studying in the United States. This experience deepened my understanding of different cultures and perspectives, and it continues to support my work with overseas customers and global teams.
 
-Today, I am learning Laravel and building personal projects while exploring AI-assisted software development.
+Living and learning in a multicultural environment taught me to understand other people's backgrounds and communicate my ideas in a clear and accessible way.
+
+Through these experiences, I discovered that I find fulfillment not only in ensuring product quality, but also in **designing and improving systems that make people's work easier**.
+
+Today, I am studying Web Development with a focus on Laravel while working on personal projects and exploring AI-assisted software development.
 
 ---
 
@@ -96,7 +104,7 @@ Through these experiences, I have developed the ability to organize complex info
 
 ---
 
-# 🛠 Skills / スキル
+# 🛠 スキル / Skills
 
 ## 💼 実務経験 / Professional Experience
 
@@ -135,13 +143,19 @@ Through these experiences, I have developed the ability to organize complex info
 
 ## 🌍 言語 / Languages
 
-- 日本語（ネイティブ）
-  Japanese (Native)
+- 日本語（ネイティブ）/ Japanese (Native)
 
-- 英語（TOEIC 860）
-  English (TOEIC 860)
+- 英語（TOEIC 860）/ English (TOEIC 860)
 
 ---
+
+## 🌎 国際経験 / International Experience
+
+- 約3年間アメリカの大学で学ぶ
+  Studied at a college in the United States for approximately three years
+
+- 品質保証業務における海外拠点・海外顧客との業務経験
+  Experience collaborating with overseas customer and global stakeholders in Quality Assurance
 
 # 📂 このリポジトリについて / About This Repository
 
@@ -185,7 +199,7 @@ I also document how I think, learn, and build—not only the technologies I use.
 
 現場で本当に役立つ仕組みやサービスを作りたいと考えています。
 
-将来的には、製造業に加え、医療・健康・家族を支える分野にも貢献していきたいと思っています。
+将来的には、製造業に加え、健康・家族を支える分野にも貢献していきたいと思っています。
 
 ---
 
