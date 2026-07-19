@@ -38,6 +38,8 @@ flowchart LR
 
 検証に通れば $request->keyword のように普通に値を取り出せます。
 
+
+
 ## API Resource：出ていくデータの整形
 役割は「モデル（DBのレコード）を、APIとして返すJSONの形に変換すること」
 
@@ -61,3 +63,22 @@ Resourceはこの間に翻訳層を挟みます。
 'published_date' => $this->published_date?->format('Y-m-d'),   💡 見やすい形に形式を指定
 'average_rating' => round((float) $this->reviews_avg_rating, 2), 💡 数値に整形・改名
 ```
+
+## そもそも、Requestとは？
+
+>[!Tip] Requestの継承
+BookIndexRequest は FormRequest を継承していますが、その FormRequest は Laravel の Request クラスを継承しています。
+
+```
+Request（HTTPリクエストを表すクラス）
+  └ FormRequest（Requestにバリデーション機能を足したもの）
+      └ BookIndexRequest（そこにルールを書いたもの）
+``` 
+> HTTPリクエスト：「クライアント(要求してきた相手)からの1回の要求」<br>
+>>Web版：ユーザーがリンクをクリックしたり、フォームを送信したり、URLを入力したりした時にブラウザがサーバーに送る要求<br>
+>>API版：HTTPリクエストの送り主は人間ではなくプログラムから送られる
+```
+public function index(Request $request)             // ただのリクエスト
+public function index(BookIndexRequest $request)    // バリデーション済みのリクエスト
+```
+※ 後者は index() が呼ばれる前にバリデーションが完了している
