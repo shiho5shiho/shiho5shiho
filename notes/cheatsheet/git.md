@@ -148,6 +148,23 @@ git remote -v
 
 # 困った時
 
+## ブランチの削除
+```
+# 1. 別のブランチへ移動（自分自身は削除できないため）
+git switch main
+
+# 2. 削除
+git branch -d feature/xxxxx
+```
+
+### `-d` と `-D` の違い
+
+|オプション|挙動|
+|---|---|
+|`-d`|マージ済みのブランチだけ削除。未マージだとエラーで止まる（安全）|
+|`-D`|未マージでも強制削除|
+
+
 ## 直前のコミットを取り消す（変更は残す）
 
 ```bash
@@ -210,9 +227,12 @@ Merge
 
 ```bash
 git status             # 状態確認
+
 git add .              # 変更を追加
 git commit -m "msg"    # コミット
 git push origin main   # GitHubへ反映
+
+git switch main        # メインへ切り替え
 git pull origin main   # 最新取得
 git log --oneline      # 履歴確認
 git diff               # 差分確認
