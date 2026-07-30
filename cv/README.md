@@ -84,15 +84,88 @@ This experience strengthened my cross-cultural communication skills and broadene
 - WSL2
 - VS Code
 
-## 業務スキル / Business Skills
+## 💼 Career Summary / 職務経歴概要
 
-- Quality Assurance
-- Supplier Quality Management
-- Process Improvement
-- Documentation
-- Cross-functional Communication
+
+海外営業・貿易事務からキャリアをスタートし、英語を活用した海外顧客・仕入先との調整業務に従事しました。
+
+その後、製造業の品質保証へ転身し、国内外の仕入先品質管理、APQP・PPAP、監査、プロジェクト推進などを担当。部門や国をまたぐ調整役として、品質と開発を支える業務に携わってきました。
+
+現在は、これまで培った業務知識を活かしながら、Laravelを中心としたWebアプリケーション開発やGitHub、SharePoint、AIを活用したDXに取り組み、製造業の業務改善を実現できるエンジニアを目指しています。
 
 ---
+
+With experience in international business, global quality assurance, and manufacturing process improvement, I have developed expertise in bridging people, processes, and technology.
+
+My career began in international sales and trade operations, where I coordinated business with overseas customers and suppliers using English. I then moved into quality assurance in the manufacturing industry, leading supplier quality management, APQP/PPAP coordination, audits, and cross-functional project management across domestic and international teams.
+
+Today, I am expanding my expertise into Web Development and Manufacturing DX, leveraging GitHub, Laravel, SharePoint, and AI-assisted development to modernize business processes and improve operational efficiency.
+
+---
+
+### 🌍 International Sales & Trade Operations
+### 海外営業・貿易事務
+**主な業務**
+
+- 輸出入業務
+- 海外顧客・海外仕入先対応
+- 貿易書類作成
+- 英語による営業サポート
+- 納期調整・受発注管理
+
+**Key Responsibilities**
+
+- Coordinated import/export operations.
+- Communicated with overseas customers and suppliers.
+- Prepared trade and shipping documentation.
+- Supported international business using English.
+- Coordinated delivery schedules and customer requirements.
+
+### 🏭 Global Quality Assurance
+### 品質保証
+
+**主な業務**
+
+- 国内外仕入先品質管理
+- APQP・PPAP対応
+- プロジェクト推進
+- KPI・進捗管理
+- 海外仕入先との英語コミュニケーション
+- 英語会議・通訳
+- 業務標準化・ドキュメント整備
+
+**Key Responsibilities**
+
+- Supplier Quality Management
+- APQP / PPAP Coordination
+- Cross-functional Project Coordination
+- KPI & Progress Management
+- Global communication with overseas suppliers
+- English meeting facilitation and interpretation
+- Documentation and process standardization
+
+### 💻 Manufacturing DX & Web Development
+### DX・Webアプリケーション開発
+
+現在取り組んでいること
+
+- LaravelによるWebアプリケーション開発
+- GitHubを活用した開発フロー
+- SharePoint・Power Platformによる業務改善
+- AIを活用した開発・DX
+
+Currently learning and developing:
+
+- Laravel
+- PHP
+- MySQL
+- Docker
+- Git / GitHub
+- SharePoint
+- Power Platform
+- AI-assisted Development (ChatGPT / GitHub Copilot)
+
+
 
 # 🚀 ポートフォリオ / Portfolio
 

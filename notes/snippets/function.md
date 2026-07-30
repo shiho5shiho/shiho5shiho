@@ -82,3 +82,48 @@ $titles = $books->map(fn($book) => $book->title);
 |fn () =>|なし|自動で見える|1つの式のみ|不要（自動）|その場限りの短い処理|
 
 > JavaScript も考え方はほぼ同じで、`function(){}` と `() => {}` の関係が PHP の無名関数とアロー関数に対応します。ただし JS は `use` なしで外の変数が見える点が違います。
+
+
+# public function（インスタンスメソッド）
+
+オブジェクトを作ってから、その`->`で呼ぶメソッドです。個々のインスタンスが持つデータ（プロパティ）を触れます。
+
+```
+class Book {
+    public string $title;
+
+    public function getTitle(): string {
+        return $this->title; // ← $this が使える
+    }
+}
+
+$book = new Book();      // インスタンスを作る
+$book->title = 'PHP入門';
+echo $book->getTitle();  // -> で呼ぶ
+```
+
+ポイントは`$this`が使えること。「この本の`title`」のように、特定のインスタンスの状態に依存する処理はこちらです。
+
+## public static function（静的メソッド）
+
+インスタンスを作らず、クラス名から直接`::`で呼ぶメソッドです。
+
+```
+class Book {
+    public static function tableName(): string {
+        return 'books'; // $this は使えない
+    }
+}
+
+echo Book::tableName(); // インスタンス不要、:: で呼ぶ
+```
+
+`$this`が使えません。なぜなら「どのインスタンスか」が存在しないからです。特定の本に依存せず、クラス全体に共通する処理・値を返すときに使います。
+
+### 対比表
+|	|`public function`	|`public static function`|
+|---|-------------------|------------------------|
+|呼び方|`$obj->method()`|`Class::method()`|
+|インスタンス|必要|不要|
+|`$this`|使える|使えない|
+|用途|インスタンスの状態を扱う|クラス共通の処理・生成|
