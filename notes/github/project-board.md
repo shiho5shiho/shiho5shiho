@@ -62,7 +62,7 @@ Doneへ移動
 
 ---
 
-## COACHTECHでの活用例
+## 活用例
 
 Todo
 - タスクCRUD
