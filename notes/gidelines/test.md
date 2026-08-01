@@ -48,36 +48,31 @@ $this->assertCount(3, $reviews);
 補足すると、モデルの単体テストで主にArrangeに来るのはFactory/Seederによるデータ準備、Actはリレーションやキャスト・アクセサの呼び出し、AssertはassertInstanceOf（型の確認）やassertEquals（値の確認）あたりになります。
 
 
-# 単体テスト
-テーブル毎にテストを実装するのが望ましい。
+# テストコードリファレンス（単体 ＋ Feature / AAA別）
 
+BookShelf のテストコードを、**Arrange / Act / Assert のどこで・何を・なぜ使うか**の観点でまとめたもの。
+後から「このパターンどう書くんだっけ」を引くための逆引き。
 
-# Featureテストを書くときの汎用的思考
-テストを書く前に毎回こう自問する：
->このリクエストは、処理のどこまで到達する？
+- **前半（1〜5章）… 単体テスト**（Issue #15 / `tests/Unit/`）
+- **後半（6〜9章）… Feature テスト**（Issue #16 CRUD・#17 認証・#18 公開API / `tests/Feature/`）
 
-到達する所までに必要なものだけArrangeで用意すればいい。  
-手前で止まるテストは準備が軽く、奥まで進むテストは準備が重い。
+---
 
-# PHPUnitがdataProviderをどう使うか
-dataProviderは「テストメソッドに引数を外から流し込む仕組み」。こう動く：
-```
-public static function 認証必須GETページ(): array
-{
-    return [
-        ['/books/create'],
-        ['/genres'],
-        ['/genres/1'],
-        // ...
-    ];
-}
+## 00. 単体テストと Feature テストの違い — 「どの層を通すか」
 
-#[DataProvider('認証必須GETページ')]
-public function test_未認証はログイン画面にリダイレクトされる(string $url): void
-{
-    $this->get($url)->assertRedirect('/login');
-}
-```
+同じ AAA でも、**テストが通る層**が違う。ここを最初に押さえると、Act に何を書くかが決まる。
+
+|                       | 単体テスト（Unit）           | Feature テスト                                          |
+| --------------------- | ---------------------------- | ------------------------------------------------------- |
+| 通す層                | モデルクラスの中だけ         | ルート → コントローラ → レスポンス（HTTP丸ごと）        |
+| **Act** で叩くもの    | リレーション・集計・キャスト | `$this->get()` / `post()` などの**HTTPリクエスト**      |
+| **Assert** で見るもの | 値・型・件数                 | **レスポンス**（ステータス・画面・JSON）と **DBの状態** |
+| ログイン              | 不要                         | 必要なら `actingAs($user)`                              |
+
+> 一言で：単体は「部品が正しいか」、Feature は「画面から操作したとき正しく動くか」を見る。
+
+---
+
 ## 0. 全体像 — AAA とは「1テストの3ブロック構造」
 
 1つのテストメソッドは、**空行で区切った3ブロック**で書く。
@@ -106,38 +101,7 @@ public function test_〇〇できる(): void
 
 ---
 
-
 ## 1. Arrange（準備）のパターン
-
-## `make`/`create`/`fresh` の使い分け
-### make()
-make() はメモリ上にモデルのインスタンスを組み立てるだけで、DBには保存しません。だから id や created_at のような「DB側が自動で埋める値」は入りません。使いどころは、DBを介さなくても検証できる純粋なロジックです。キャストやアクセサ(例えば日付を Carbon に変換する挙動、フルネームを組み立てるアクセサ)を確かめたいとき、わざわざ保存する必要がないので make() で十分、かつ速いです。
-```
-$book = Book::factory()->make(['published_at' => '2024-01-01']);
-// $book->published_at が Carbon 型になっているか、を保存せず確認できる
-```
-
-### create()
-create() はインスタンスを作ってそのままDBに保存します。保存した瞬間にDB側が id や created_at を埋めてくれるので、戻ってきたオブジェクトにはそれらが入っています。リレーションをたどるテストや、withCount・withAvg のような集計クエリのテストは、実際にレコードがDBに無いと成立しないので create() が必須です。
-```
-$book = Book::factory()->has(Review::factory()->count(3))->create();
-// DBに本1件+レビュー3件が入るので、レビュー数の集計テストができる
-```
-
-### fresh()
-fresh() は、すでに手元にあるモデルをDBから取り直すメソッドです。ここが少し分かりにくいところで、create() 直後の変数は「PHP側でこちらが指定した値」を保持したままです。それを fresh() すると、DBに実際に保存された値を、キャストを通した状態で取得し直せます。つまり「マイグレーションのカラム定義 → 保存 → キャスト」という往復が忠実に機能しているかを確かめたいときに使います。
-```
-$book = Book::factory()->create(['published_at' => '2024-01-01']);
-$fresh = $book->fresh();
-// DBに書き込まれ、読み戻したうえで published_at が期待通りか検証する
-```
->道具に例えると、make() は「組み立てただけの試作品」、create() は「工場のラインに一度流して型番シールまで貼られた製品」、fresh() は「倉庫に入れたものを改めて取り出して検品する」感覚です。
-
->[!Tip] 判断の順番としては、まず「このテスト、DBに保存しないと成立しないか?」を問うのが早いです。
-- 保存不要なら make()。
-- 保存が要るなら create()。
-- さらに「保存して読み戻した後の値」まで厳密に見たいなら create() + fresh()、
-という三段階で選べば迷いにくいはずです。
 
 ### 1-1. `make()` と `create()` の使い分け ＝ 「DBが要るか」で決まる
 
@@ -278,18 +242,13 @@ $this->assertSame(0, $result->reviews_count);
 
 > 判断基準：**「型がDBエンジンや環境で変わりうるか？」** 変わりうるなら `assertEquals`、int/stringで確定なら `assertSame`。
 
-### 3-4. `assertViewHas` の2つの使い方
-
-assertViewHas('books') — 「booksという変数が渡されているか」だけ見る
-assertViewHas('books', クロージャ) — 「渡されたbooksが条件を満たすか」まで見る
-
-### 3-5. null チェック — `assertNull`
+### 3-4. null チェック — `assertNull`
 
 ```php
 $this->assertNull($result->reviews_avg_rating);  // レビュー0件 → 平均はnull
 ```
 
-### 3-6. 型の確認 — `assertInstanceOf`
+### 3-5. 型の確認 — `assertInstanceOf`
 
 ```php
 $this->assertInstanceOf(Carbon::class, $publishedDate);  // Carbon型になっているか
@@ -428,4 +387,253 @@ public function test_出版日が日付型にキャストされる(): void
 - テスト用DBは **SQLite インメモリ** → 高速・本番DBと分離
 - ファイル構成：`tests/Unit/` に `BookTest` / `UserTest` / `GenreTest` / `ReviewTest` の4ファイル、計21ケース
 
+---
+---
 
+# ▼ Feature テスト編（Issue #16〜#18）
+
+`tests/Feature/`。HTTPリクエストを投げて、**レスポンス**と**DBの状態**を検証する。
+Issue の切り方は #16 CRUD系 / #17 認証 / #18 公開API の3本。
+
+---
+
+## 6. Feature テストの Arrange / Act / Assert
+
+単体テストとの違いは Act と Assert に集中している。
+
+### 6-1. Arrange — 単体とほぼ同じ ＋ ログインユーザーの用意
+
+```php
+// Arrange
+$user = User::factory()->create();          // 操作する人
+$book = Book::factory()->for($user)->create();  // 操作対象
+```
+
+Feature 特有なのは「**誰がリクエストするか**」を用意する点。保護されたルートを叩くテストでは、ログインユーザーを Arrange で作る。
+
+### 6-2. Act — HTTPリクエストを1本投げる
+
+単体では `$user->books` のようにモデルを直接叩いたが、Feature では**HTTPメソッド**で叩く。
+
+```php
+$response = $this->get('/books');                    // 一覧を見る
+$response = $this->post('/books', ['title' => '…']); // 登録する
+$response = $this->put("/books/{$book->id}", [...]);  // 更新する
+$response = $this->delete("/books/{$book->id}");      // 削除する
+```
+
+ログインが要るルートは `actingAs()` を前に噛ませる。
+
+```php
+$response = $this->actingAs($user)->post('/books', [...]);
+//                👆このリクエストを$userとして送る
+```
+
+> 戻り値の `$response` に対して Assert を繋げていくのが Feature の型。
+
+### 6-3. Assert — 「レスポンス」と「DBの状態」の2系統
+
+Feature の Assert は2方向から確認する。**片方だけだと不十分**。
+
+```php
+$response->assertRedirect('/books');            // ①レスポンス：どこへ飛んだか
+$this->assertDatabaseHas('books', ['title' => '吾輩は猫である']);  // ②DB：実際に保存されたか
+```
+
+- **レスポンス系**（`$response->assert*`）… 画面の挙動が正しいか
+- **DB系**（`$this->assertDatabase*`）… データが正しく変わったか
+
+「リダイレクトはしたが保存されていない」バグは①だけ見ると見逃す。だから両方見る。
+
+---
+
+## 7. レスポンス系 Assert（`$response->assert*`）
+
+`$response` の戻り値に繋げるメソッド群。
+
+| メソッド                      | 見るもの                                     |
+| ----------------------------- | -------------------------------------------- |
+| `assertOk()`                  | ステータス200か（`assertStatus(200)`の別名） |
+| `assertStatus(201)`           | 任意のステータスコード（登録成功=201など）   |
+| `assertRedirect('/books')`    | リダイレクト先                               |
+| `assertForbidden()`           | 403（認可で弾かれたか＝Policyの検証）        |
+| `assertSee('吾輩は猫である')` | 画面に文字列が表示されるか                   |
+| `assertDontSee('…')`          | 画面に表示されて**いない**か                 |
+| `assertJson([...])`           | JSONに指定の内容が含まれるか（API用）        |
+| `assertJsonCount(3, 'data')`  | JSON配列の件数（API用）                      |
+| `assertJsonStructure([...])`  | JSONのキー構造（API用）                      |
+
+---
+
+## 8. DB系 Assert（`$this->assertDatabase*`）
+
+`RefreshDatabase` と組み合わせ、DBの行を直接見る。
+
+| メソッド                                | 見るもの                                       |
+| --------------------------------------- | ---------------------------------------------- |
+| `assertDatabaseHas('books', [...])`     | その条件の行が**存在する**（登録・更新の確認） |
+| `assertDatabaseMissing('books', [...])` | その条件の行が**存在しない**（削除の確認）     |
+| `assertDatabaseCount('books', 3)`       | テーブルの行数                                 |
+
+> 読み方：`Has` は「入ったか」、`Missing` は「消えたか」。登録テストは `Has`、削除テストは `Missing` とセットで覚える。
+
+---
+
+## 9. パターン別まとめ（Issue #16〜#18 × AAA）
+
+### ① CRUD系テスト（Issue #16）
+
+操作ごとに「レスポンス＋DB」の組み合わせが決まっている。
+
+| 操作     | Act                         | レスポンス               | DB                                |
+| -------- | --------------------------- | ------------------------ | --------------------------------- |
+| 一覧表示 | `get('/books')`             | `assertOk` + `assertSee` | —                                 |
+| 登録     | `post('/books', [...])`     | `assertRedirect`         | `assertDatabaseHas`               |
+| 更新     | `put("/books/{id}", [...])` | `assertRedirect`         | `assertDatabaseHas`（新しい値で） |
+| 削除     | `delete("/books/{id}")`     | `assertRedirect`         | `assertDatabaseMissing`           |
+
+**登録テストの例：**
+
+```php
+public function test_書籍を登録できる(): void
+{
+    // Arrange
+    $user = User::factory()->create();
+    $genre = Genre::factory()->create();
+
+    // Act
+    $response = $this->actingAs($user)->post('/books', [
+        'title'     => '吾輩は猫である',
+        'isbn'      => '9781234567890',
+        'genres'    => [$genre->id],
+    ]);
+
+    // Assert
+    $response->assertRedirect('/books');                       // 画面：一覧へ戻る
+    $this->assertDatabaseHas('books', ['title' => '吾輩は猫である']);  // DB：保存された
+}
+```
+
+**削除テストの例：**
+
+```php
+public function test_書籍を削除できる(): void
+{
+    // Arrange
+    $user = User::factory()->create();
+    $book = Book::factory()->for($user)->create();
+
+    // Act
+    $response = $this->actingAs($user)->delete("/books/{$book->id}");
+
+    // Assert
+    $response->assertRedirect('/books');
+    $this->assertDatabaseMissing('books', ['id' => $book->id]);  // DB：消えた
+}
+```
+
+### ② 認証テスト（Issue #17）
+
+「ログインの有無・持ち主かどうか」でアクセスが変わることを検証。**異常系**が主役。
+
+| 検証したいこと               | Arrange           | Act                           | Assert                     |
+| ---------------------------- | ----------------- | ----------------------------- | -------------------------- |
+| 未ログインは弾かれる         | ユーザー作らない  | `get('/books')`               | `assertRedirect('/login')` |
+| ログイン済みは入れる         | `actingAs($user)` | `get('/books')`               | `assertOk`                 |
+| 他人の物は操作不可（Policy） | 別ユーザーで      | `delete("/books/{他人のid}")` | `assertForbidden`（403）   |
+
+**未ログイン拒否の例：**
+
+```php
+public function test_未ログインユーザーは書籍一覧にアクセスできない(): void
+{
+    // Arrange（ログインユーザーを用意しない ＝ これ自体が前提）
+
+    // Act
+    $response = $this->get('/books');
+
+    // Assert
+    $response->assertRedirect('/login');  // ログイン画面へ飛ばされる
+}
+```
+
+**Policy（他人の書籍は削除できない）の例：**
+
+```php
+public function test_他人の書籍は削除できない(): void
+{
+    // Arrange
+    $owner = User::factory()->create();
+    $other = User::factory()->create();
+    $book  = Book::factory()->for($owner)->create();  // ownerの本
+
+    // Act
+    $response = $this->actingAs($other)->delete("/books/{$book->id}");  // otherが削除を試みる
+
+    // Assert
+    $response->assertForbidden();                            // 403で弾かれる
+    $this->assertDatabaseHas('books', ['id' => $book->id]);  // 消えずに残っている
+}
+```
+
+> ポイント：Policy テストは「弾かれた（403）」だけでなく「**データが残っている**」まで見ると完全。
+
+### ③ 公開APIテスト（Issue #18）
+
+JSONレスポンスの中身を検証。`getJson()` を使うと `Accept: application/json` が自動で付く。
+
+| 検証したいこと | Act                             | Assert                               |
+| -------------- | ------------------------------- | ------------------------------------ |
+| 一覧が返る     | `getJson('/api/v1/books')`      | `assertOk` + `assertJsonCount`       |
+| 中身が正しい   | `getJson("/api/v1/books/{id}")` | `assertJson` / `assertJsonStructure` |
+
+```php
+public function test_書籍一覧APIがJSONを返す(): void
+{
+    // Arrange
+    Book::factory()->count(3)->create();
+
+    // Act
+    $response = $this->getJson('/api/v1/books');
+    //                👆 getJson は Accept: application/json を自動付与
+
+    // Assert
+    $response->assertOk();
+    $response->assertJsonCount(3, 'data');  // data配列に3件
+}
+```
+
+```php
+public function test_書籍詳細APIが正しい構造を返す(): void
+{
+    // Arrange
+    $book = Book::factory()->create(['title' => '坊っちゃん']);
+
+    // Act
+    $response = $this->getJson("/api/v1/books/{$book->id}");
+
+    // Assert
+    $response->assertOk();
+    $response->assertJson(['data' => ['title' => '坊っちゃん']]);        // 値の確認
+    $response->assertJsonStructure(['data' => ['id', 'title', 'isbn']]); // キー構造の確認
+}
+```
+
+> `assertJson`（値が合っているか）と `assertJsonStructure`（キーが揃っているか）は役割が違う。両方あると「形も中身も正しい」と言える。
+
+---
+
+## 10. Feature テスト 読み方チートシート
+
+1. **Arrange** → 「誰がリクエストする？」（`actingAs` が要るか）「操作対象は誰の物？」
+2. **Act** → 「どのHTTPメソッド？」（get/post/put/delete のどれか＝正常/異常のどちらを見るか）
+3. **Assert** → 「**レスポンス**と**DB**の両方を見ているか？」片方だけは要注意
+
+### 単体 vs Feature 早見表（総まとめ）
+
+|                 | Act で叩くもの                            | Assert の代表                                            |
+| --------------- | ----------------------------------------- | -------------------------------------------------------- |
+| 単体            | `$model->relation` / `withAvg` / キャスト | `assertCount` / `assertEquals` / `assertInstanceOf`      |
+| Feature（CRUD） | `post` / `put` / `delete`                 | `assertRedirect` + `assertDatabaseHas`/`Missing`         |
+| Feature（認証） | `actingAs`→保護ルート                     | `assertRedirect('/login')` / `assertForbidden`           |
+| Feature（API）  | `getJson`                                 | `assertJson` / `assertJsonStructure` / `assertJsonCount` |
