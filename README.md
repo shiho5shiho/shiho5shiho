@@ -1,43 +1,49 @@
 # 👋 はじめまして / Hi there!
 
-## 「人の困りごとを、より良い仕組みで解決する。」
+## 🕊️ 正解を守るだけじゃなく、もっといい答えをつくる。
+### Not just following the right answer. Creating a better one.
 
 **奥出 詩穂（Shiho Okude）** です。
 
-製造業で品質保証として約8年間勤務し、品質保証で培った経験を活かした<br>
-**現場の課題をITで解決できるエンジニア**を目指しています。
+私は、**正解がひとつではないものを考え、試し、形にしていくこと**が好きです。
 
-企画・設計・製造・購買・国内外の仕入先など、多くの関係者と連携しながら、<br>
-日々、品質づくりや業務改善に取り組んできました。
+製造業の品質保証として約8年間、品質を守るためのルールや仕組みに携わってきました。
 
-学生時代には約3年間アメリカで生活・留学し、異文化コミュニケーションや多様な価値観への理解を深めました。<br>
-この経験は、現在の海外顧客や海外拠点との業務にも活かされています。
+その経験を通して気づいたのは、私が本当にやりたいのは、決められた仕組みを守ることではなく、
 
-異なる文化や価値観の中で学んだ経験は、相手の背景を理解し、自分の考えを分かりやすく伝える姿勢につながっています。
+**「これ、もっと良くできない？」  
+「もっとシンプルにできない？」  
+「こんなやり方もあるんじゃない？」**
 
-その経験を通して、「品質を守ること」だけではなく、<br>
-**人が働きやすくなる仕組みを考え、改善すること**にやりがいを感じるようになりました。
+と考え、人の困りごとや負担を減らす新しい仕組みをつくることでした。
 
-現在はLaravelを中心としたWeb開発を学びながら、個人開発やAIを活用した開発にも取り組んでいます。
+**人を縛るためではなく、人を自由にするためのものをつくりたい。**
+
+現在はLaravelを中心にWeb開発を学びながら、個人開発、業務改善、DX、AIを活用した開発など、「まだ正解のない課題を、技術でどう解決できるか」を探求しています。
 
 ---
 
-## Solving problems through better systems.
-
 I'm **Shiho Okude**.
 
-I have worked in Quality Assurance in the manufacturing industry for approximately eight years. Building on this experience, I am working toward becoming **an engineer who solves real-world problems through technology**.
+I enjoy **exploring problems that don't have a single right answer, experimenting with ideas, and turning them into something useful.**
 
-Throughout my career, I have collaborated with product planning, design, production, purchasing, and both domestic and overseas suppliers to improve product quality and streamline business processes.
+For about eight years, I have worked in Quality Assurance in the manufacturing industry, where I have been involved in building and maintaining systems and processes to ensure product quality.
 
-During my student years, I spent approximately three years living and studying in the United States. This experience deepened my understanding of different cultures and perspectives, and it continues to support my work with overseas customers and global teams.
+Through that experience, I discovered that what excites me most is not simply following established processes, but asking:
 
-Living and learning in a multicultural environment taught me to understand other people's backgrounds and communicate my ideas in a clear and accessible way.
+**"Can we make this better?"  
+"Can we make this simpler?"  
+"What if we tried a different approach?"**
 
-Through these experiences, I discovered that I find fulfillment not only in ensuring product quality, but also in **designing and improving systems that make people's work easier**.
+I enjoy creating systems that reduce friction and make people's work easier.
 
-Today, I am studying Web Development with a focus on Laravel while working on personal projects and exploring AI-assisted software development.
+I don't want to create systems that simply constrain people.
 
+**I want to create things that give people more freedom, rather than constrain them.**
+
+Today, I am learning Web Development with a focus on Laravel while exploring personal projects, process improvement, DX, and AI-assisted development.
+
+I'm especially interested in using technology to explore problems where the answer hasn't been defined yet.
 ---
 
 # 🌱 現在取り組んでいること / Current Focus
@@ -197,21 +203,29 @@ I also document how I think, learn, and build—not only the technologies I use.
 
 # 🎯 目指していること / Vision
 
-私が目指しているのは、
+### 人を縛る仕組みではなく、人を自由にする仕組みをつくる。
+### Build systems that give people more freedom, not more constraints.
 
-**人の困りごとを理解し、ITの力で解決できるエンジニア**です。
+決められた正解をただ守るのではなく、
 
-品質保証で培った経験とWeb開発の知識を組み合わせ、
+**「もっといい方法はないだろうか？」**
 
-現場で本当に役立つ仕組みやサービスを作りたいと考えています。
+と考え続けたい。
 
-将来的には、製造業に加え、健康・家族を支える分野にも貢献していきたいと思っています。
+人の困りごとや負担を見つけ、技術を使って、よりシンプルで使いやすい形に変えていく。
+
+そんなものづくりをしていきたいと考えています。
 
 ---
 
-My goal is to become an engineer who understands people, real-world operations, and creates meaningful solutions through technology.
+Rather than simply following established answers, I want to keep asking:
 
-I hope to contribute not only to manufacturing but also to healthcare, wellness, and family-oriented services.
+**"Is there a better way?"**
+
+I want to identify friction in people's work and everyday lives, then use technology to make things simpler, easier, and more flexible.
+
+**Not just following the right answer.  
+Creating a better one.**
 
 ---
 
