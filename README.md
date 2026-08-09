@@ -1,7 +1,6 @@
 # 👋 はじめまして / Hi there!
 
-## 🕊️ より自由に、より良いかたちへ。
-### Exploring, creating, and finding better ways.
+## 🕊️ より自由に、より良いかたちへ。 / Exploring, creating, and finding better ways.
 
 **奥出 詩穂（Shiho Okude）** です。
 
