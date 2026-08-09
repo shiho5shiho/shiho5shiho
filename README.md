@@ -8,7 +8,8 @@
 
 製造業の品質保証として約8年間、品質を守るためのルールや仕組みに携わってきました。
 
-その経験を通して気づいたのは、私が本当にやりたいのは、決められた仕組みを守るための仕組み作りや統制ではなく、
+その経験を通して気づいたのは、私が本当にやりたいのは、
+**決められた枠の中に収めるための仕組み作りや統制ではなく、**
 
 **「こんなのあったらよくない？」  
 「こんなやり方もあるんじゃない？」  
@@ -28,7 +29,7 @@ I enjoy **exploring problems that don't have a single right answer, experimentin
 
 For about eight years, I have worked in Quality Assurance in the manufacturing industry, where I have been involved in building and maintaining systems and processes to ensure product quality.
 
-Through that experience, I realized that what I truly want to do is **not build systems or controls designed to keep people within established rules and processes**, but to ask:
+Through that experience, I realized that what I truly want to do is **not build systems and controls designed to keep things within predefined boundaries,** but to freely explore ideas by asking:
 
 **"Wouldn't it be great if something like this existed?"  
 "What if we tried it this way?"  
