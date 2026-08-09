@@ -8,10 +8,10 @@
 
 製造業の品質保証として約8年間、品質を守るためのルールや仕組みに携わってきました。
 
-その経験を通して気づいたのは、私が本当にやりたいのは、決められた仕組みを守ることではなく、
+その経験を通して気づいたのは、私が本当にやりたいのは、決められた仕組みを守るための仕組み作りや統制ではなく、
 
-**「これ、もっと良くできない？」
-「もっとシンプルにできない？」
+**「これ、もっと良くできない？」  
+「もっとシンプルにできない？」  
 「こんなやり方もあるんじゃない？」**
 
 と考え、人の困りごとや負担を減らす新しい仕組みをつくることでした。
@@ -28,7 +28,7 @@ I enjoy **exploring problems that don't have a single right answer, experimentin
 
 For about eight years, I have worked in Quality Assurance in the manufacturing industry, where I have been involved in building and maintaining systems and processes to ensure product quality.
 
-Through that experience, I discovered that what excites me most is not simply following established processes, but asking:
+Through that experience, I realized that what I truly want to do is **not build systems or controls designed to keep people within established rules and processes**, but to ask:
 
 **"Can we make this better?"  
 "Can we make this simpler?"  
