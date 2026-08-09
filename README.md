@@ -10,11 +10,11 @@
 
 その経験を通して気づいたのは、私が本当にやりたいのは、決められた仕組みを守るための仕組み作りや統制ではなく、
 
-**「これ、もっと良くできない？」  
-「もっとシンプルにできない？」  
-「こんなやり方もあるんじゃない？」**
+**「こんなのあったらよくない？」  
+「こんなやり方もあるんじゃない？」  
+「もっとシンプルにできない？」**
 
-と考え、人の困りごとや負担を減らす新しい仕組みをつくることでした。
+と自由に考え、アイデアを形にしながら、人の困りごとや負担を減らすものをつくることでした。
 
 **人を縛るためではなく、人を自由にするためのものをつくりたい。**
 
@@ -30,11 +30,11 @@ For about eight years, I have worked in Quality Assurance in the manufacturing i
 
 Through that experience, I realized that what I truly want to do is **not build systems or controls designed to keep people within established rules and processes**, but to ask:
 
-**"Can we make this better?"  
-"Can we make this simpler?"  
-"What if we tried a different approach?"**
+**"Wouldn't it be great if something like this existed?"  
+"What if we tried it this way?"  
+"Could we make this simpler?""**
 
-I enjoy creating systems that reduce friction and make people's work easier.
+and turn those ideas into things that make people's lives and work easier.
 
 I don't want to create systems that simply constrain people.
 
