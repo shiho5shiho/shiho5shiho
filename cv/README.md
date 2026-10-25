@@ -91,7 +91,7 @@ This experience strengthened my cross-cultural communication skills and broadene
 
 その後、製造業の品質保証へ転身し、国内外の仕入先品質管理、APQP・PPAP、監査、プロジェクト推進などを担当。部門や国をまたぐ調整役として、品質と開発を支える業務に携わってきました。
 
-現在は、これまで培った業務知識を活かしながら、Laravelを中心としたWebアプリケーション開発やGitHub、SharePoint、AIを活用したDXに取り組み、製造業の業務改善を実現できるエンジニアを目指しています。
+現在は、これまで培った業務知識を活かしながら、Laravelを中心としたWebアプリケーション開発やGitHubを使った開発フローを学び、製造業の業務改善を実現できるエンジニアを目指しています。
 
 ---
 
@@ -99,7 +99,7 @@ With experience in international business, global quality assurance, and manufac
 
 My career began in international sales and trade operations, where I coordinated business with overseas customers and suppliers using English. I then moved into quality assurance in the manufacturing industry, leading supplier quality management, APQP/PPAP coordination, audits, and cross-functional project management across domestic and international teams.
 
-Today, I am expanding my expertise into Web Development and Manufacturing DX, leveraging GitHub, Laravel, SharePoint, and AI-assisted development to modernize business processes and improve operational efficiency.
+Today, I am learning web application development with Laravel and development workflows with GitHub, with the goal of building tools that improve manufacturing operations.
 
 ---
 
@@ -151,7 +151,6 @@ Today, I am expanding my expertise into Web Development and Manufacturing DX, le
 
 - LaravelによるWebアプリケーション開発
 - GitHubを活用した開発フロー
-- SharePoint・Power Platformによる業務改善
 - AIを活用した開発・DX
 
 Currently learning and developing:
@@ -161,8 +160,6 @@ Currently learning and developing:
 - MySQL
 - Docker
 - Git / GitHub
-- SharePoint
-- Power Platform
 - AI-assisted Development (ChatGPT / GitHub Copilot)
 
 
@@ -173,8 +170,7 @@ Currently learning and developing:
 | -------------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |-------------|
 | **家族カルテ / Family Health Record** | 🚧 In Progress   | 家系図と家族の病歴を管理し、健康情報を未来へつなぐWebアプリ / Laravel application for preserving family medical history across generations. | https://github.com/shiho5shiho/pedigree-app|
 
-➡️ See full portfolio:
-./projects/README.md
+➡️ [See full portfolio / 個人開発](../projects/README.md)
 
 
 
@@ -211,8 +207,8 @@ In the future, I hope to contribute to software that supports not only manufactu
 
 # 🔗 リンク / Links
 
-- 📄 [職務経歴 / CV](./cv/README.md)
-- 🚀 [個人開発 / Projects](./projects/README.md)
-- 📚 [学習記録 / Learning](./learning/README.md)
-- 📝 [技術メモ / Notes](./notes/README.md)
-- 💡 [アイデア / Ideas](./ideas/README.md)
+- 📄 [職務経歴 / CV](../cv/README.md)
+- 🚀 [個人開発 / Projects](../projects/README.md)
+- 📚 [学習記録 / Learning](../learning/README.md)
+- 📝 [技術メモ / Notes](../notes/README.md)
+- 💡 [アイデア / Ideas](../ideas/README.md)
