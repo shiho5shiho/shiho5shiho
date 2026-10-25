@@ -34,7 +34,7 @@ $callback($this, $value);
 ```
 function ($query, $keyword) {
 //         道具    材料
-    $query->where('title', 'like', "%{$keyword}%");
+    $query->where('title', 'like', "%{$}%");
 //   道具を使って ↑動作↑        材料を埋め込む
 }
 ```
