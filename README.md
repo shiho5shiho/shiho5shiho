@@ -4,7 +4,10 @@
 
 ### 🕊️ 人の困りごとを、シンプルで使いやすい形に。
 
-製造業で約8年間、品質保証業務に携わってきました。現在はLaravelを中心にWebアプリケーション開発を学んでいます。
+英語を使った営業事務・貿易事務を経験した後、製造業で約8年間、品質保証業務に携わっています。
+
+海外顧客・仕入先とのやり取りや、書類作成、受発注・納期調整など、日々の業務を支える仕事を経験してきました。  
+現在は、こうした実務経験を活かして使いやすい仕組みを作れるよう、Laravelを中心にWebアプリケーション開発を学んでいます。
 
 日々の仕事や暮らしの中で感じる、
 
@@ -19,7 +22,9 @@
 
 ---
 
-I'm **Shiho Okude**, a manufacturing quality assurance professional with approximately eight years of experience, currently learning web application development with Laravel.
+I'm **Shiho Okude**. My background includes sales administration and trade operations using English, followed by approximately eight years in manufacturing quality assurance.
+
+I have experience communicating with overseas customers and suppliers, preparing documents, processing orders, and coordinating delivery schedules. I am currently learning web application development with Laravel to turn that practical experience into useful, easy-to-use tools.
 
 I enjoy finding ways to make everyday work and life simpler—by organizing information, rethinking workflows, and turning ideas into useful tools.
 
@@ -105,9 +110,13 @@ Working on a simulated Laravel development project to practice clarifying specif
 
 # 💼 これまでの経験 / Professional Background
 
-海外営業・貿易事務を経て、製造業の品質保証に約8年間従事しています。
+### 営業事務・貿易事務
 
-主に、以下の業務に携わってきました。
+- 英語を使った海外顧客・仕入先とのやり取り
+- 貿易関連書類の作成、営業サポート
+- 受発注管理・納期調整
+
+### 製造業での品質保証
 
 - Design Review（DR）の運営、部品認証・品質認定
 - 国内外の仕入先や関係部署との連携
@@ -122,7 +131,9 @@ Working on a simulated Laravel development project to practice clarifying specif
 
 My background includes international sales and trade operations, followed by approximately eight years in manufacturing quality assurance.
 
-My experience covers design review coordination, component qualification, supplier communication, and APQP/PPAP-related work.
+In sales administration and trade operations, I communicated with overseas customers and suppliers in English, prepared trade documents, supported sales activities, and coordinated orders and delivery schedules.
+
+In manufacturing quality assurance, my responsibilities have included design review coordination, component qualification, APQP/PPAP-related work, and collaboration with suppliers and internal teams in Japan and overseas.
 
 Working across teams has shown me how scattered information and repetitive manual tasks can make everyday work harder.
 
