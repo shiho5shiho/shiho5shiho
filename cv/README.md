@@ -9,39 +9,101 @@
 
 # 👋 自己紹介 / About Me
 
-製造業において約8年間、品質保証業務に従事しています。
+英語を使った輸入事務・海外営業事務をはじめ、店舗管理事務、製造業での翻訳・通訳、技術補助を経験してきました。現在は、製造業の品質保証業務に従事しています。
 
-企画・設計・製造・購買・国内外の仕入先など、多くの関係者と連携しながら、製品を安定して市場へ届けるための品質づくりや業務改善に携わってきました。
+海外顧客・工場とのやり取り、受発注・納期管理、書類作成、データ集計など、業務を支えるさまざまな役割を担当してきました。情報を整理し、相手が理解・判断しやすい形で伝えることを大切にしています。
 
-学生時代には約3年間アメリカで生活し、現地の大学で学びました。この経験を通して培った異文化コミュニケーションや多様な価値観への理解は、現在の海外仕入先や海外拠点との業務においても活かされています。
+現在はLaravelを中心にWebアプリケーション開発を学び、事務・製造の現場で得た経験を、使いやすい仕組みづくりに活かせるエンジニアを目指しています。
 
-現在は品質保証で培った現場経験と課題解決力を基盤に、Laravelを中心としたWeb開発を学び、「現場の課題をITで解決できるエンジニア」を目指しています。
+---
 
-I have approximately eight years of experience in Quality Assurance within the manufacturing industry.
+My background spans import administration, international sales support, retail administration, translation and interpretation, and manufacturing technical support. I currently work in manufacturing quality assurance.
 
-Throughout my career, I have collaborated with product planning, design, production, purchasing, and domestic and overseas suppliers to improve quality and build reliable processes.
+Across these roles, I have handled communication with overseas customers and factories, order processing, delivery coordination, documentation, and data aggregation. I value organizing information so that others can understand it and make informed decisions.
 
-During my student years, I spent approximately three years living and studying in the United States. This experience strengthened my cross-cultural communication skills and broadened my perspective, which continues to support my work with overseas suppliers and global stakeholders today.
+I am currently learning web application development with Laravel, with the goal of turning my experience in administrative and manufacturing operations into useful, easy-to-use tools.
 
-Today, I am building on my Quality Assurance experience while studying Web Development with a focus on Laravel, with the goal of becoming an engineer who solves real-world problems through technology.
 ---
 
 # 💼 職務経歴 / Career
 
-## 品質保証 / Quality Assurance Engineer
+## 品質保証 / Quality Assurance
 
-**電子部品メーカー / Electronic Components Manufacturer**
+**電子部品メーカー / Electronic Components Manufacturer**  
+**2017年10月 – 現在 / Oct 2017 – Present**  
+派遣社員として就業後、2018年2月に正社員登用。  
+Initially assigned as a temporary agency employee; became a permanent employee in February 2018.
 
-**2018 – Present**
+- 公規格に基づく社内規定の整備
+- Design Review（DR）の開催・運営
+- 仕入先管理、部品認証・品質認定、APQP・PPAP関連業務
+- 顧客クレーム対応、国内外の関係部署との連携
 
-### 主な担当業務 / Responsibilities
+Responsibilities include maintaining internal procedures based on applicable standards, coordinating design reviews, supplier quality management, component qualification, APQP/PPAP-related work, and handling customer quality issues in collaboration with internal and external stakeholders.
 
+## 技術補助 / Manufacturing Technical Support
 
-- Design Review (DR) / デザインレビュー運営
-- Component Qualification / 部品認証・品質認定
-- Supplier Quality Management / 仕入先品質管理
-- Cross-functional Coordination / 部門間調整
-- Communication with Overseas Suppliers / 海外仕入先とのコミュニケーション
+**ディスプレイメーカー・製造技術部門 / Display Manufacturer, Manufacturing Engineering**  
+**2016年9月 – 2017年9月 / Sep 2016 – Sep 2017**  
+派遣社員 / Temporary agency employee
+
+- 技術開発に伴う製造部向け指示書の作成
+- 委託加工業者への発注依頼
+- 分析データをもとにした歩留まりデータの集計
+
+Supported technical development by preparing instructions for manufacturing teams, arranging orders with outsourced processing vendors, and compiling yield data from analysis results.
+
+## 翻訳・通訳／生産統括業務支援 / Translation, Interpretation & Production Coordination Support
+
+**電子部品メーカー / Electronic Components Manufacturer**  
+**2015年12月 – 2016年9月 / Dec 2015 – Sep 2016**  
+派遣社員 / Temporary agency employee
+
+- 仕様書・プレゼン資料・メールなどの翻訳
+- 海外顧客との電話会議や来社時の通訳
+- 顧客による工程監査での通訳、会議・現場確認の日程調整および当日の進行支援
+
+Translated specifications, presentations, and correspondence, and interpreted during calls and visits involving overseas customers. During a customer process audit, also coordinated meeting and factory-review schedules and supported day-to-day time management.
+
+## 海外営業事務 / International Sales Administration
+
+**精密部品メーカー・海外営業部門 / Precision Components Manufacturer, International Sales**  
+**2014年8月 – 2015年7月 / Aug 2014 – Jul 2015**  
+派遣社員 / Temporary agency employee
+
+- 引き合い図面の社内検討依頼、見積書の作成
+- 受注処理・納期管理・委託在庫管理
+- 返品処理、請求書・Debit Noteの発行、月次締め処理
+- 海外顧客への対応
+
+Handled internal reviews of customer inquiry drawings, quotation preparation, order processing, delivery coordination, consignment inventory, returns, invoicing, debit notes, and month-end closing, while supporting overseas customers.
+
+## 店舗管理事務・金庫担当 / Retail Administration & Cash Office Operations
+
+**外資系会員制小売企業・店舗管理部門 / International Membership Retailer, Administration**  
+**2013年3月 – 2014年7月 / Mar 2013 – Jul 2014**  
+正社員 / Permanent employee
+
+- 現金売上の集計、クレジット売上の日計確認
+- 商品券の発行、金融機関への両替金配送依頼、警備会社への売上金引き渡し
+- メンバーシップ登録手続き、国内外の顧客への入会説明
+- 通訳対応、社内掲示物の作成
+
+Managed cash-office tasks, including daily cash counts, credit-card sales checks, voucher issuance, change-delivery arrangements, and cash handovers to the security service. Also supported membership registration, explanations for domestic and overseas customers, interpretation, and internal notices.
+
+## 輸入事務・海外営業関連業務 / Import Administration & Overseas Sales Support
+
+**製造業・業務部門 / Manufacturing Company, Business Operations**  
+**2008年11月 – 2012年12月 / Nov 2008 – Dec 2012**  
+正社員 / Permanent employee
+
+- 中国の自社工場への発注依頼、納期管理
+- 国内外への貨物の発着日連絡、通関業者の手配
+- 貨物の受入れ・搬入先への処理指示、仕入報告書の作成
+- 香港の従業員への英語による業務指示・連絡
+- フィリピン・セブ島を担当する海外営業関連業務
+
+Handled import operations, including orders to the company's factory in China, delivery scheduling, shipment coordination, customs broker arrangements, receiving instructions, and purchasing reports. Communicated work instructions in English to colleagues in Hong Kong and supported overseas sales activities for Cebu, Philippines.
 
 ---
 
@@ -84,85 +146,18 @@ This experience strengthened my cross-cultural communication skills and broadene
 - WSL2
 - VS Code
 
-## 💼 Career Summary / 職務経歴概要
+# 🌱 現在の開発学習 / Current Development Learning
 
-
-海外営業・貿易事務からキャリアをスタートし、英語を活用した海外顧客・仕入先との調整業務に従事しました。
-
-その後、製造業の品質保証へ転身し、国内外の仕入先品質管理、APQP・PPAP、監査、プロジェクト推進などを担当。部門や国をまたぐ調整役として、品質と開発を支える業務に携わってきました。
-
-現在は、これまで培った業務知識を活かしながら、Laravelを中心としたWebアプリケーション開発やGitHubを使った開発フローを学び、製造業の業務改善を実現できるエンジニアを目指しています。
-
----
-
-With experience in international business, global quality assurance, and manufacturing process improvement, I have developed expertise in bridging people, processes, and technology.
-
-My career began in international sales and trade operations, where I coordinated business with overseas customers and suppliers using English. I then moved into quality assurance in the manufacturing industry, leading supplier quality management, APQP/PPAP coordination, audits, and cross-functional project management across domestic and international teams.
-
-Today, I am learning web application development with Laravel and development workflows with GitHub, with the goal of building tools that improve manufacturing operations.
-
----
-
-### 🌍 International Sales & Trade Operations
-### 海外営業・貿易事務
-**主な業務**
-
-- 輸出入業務
-- 海外顧客・海外仕入先対応
-- 貿易書類作成
-- 英語による営業サポート
-- 納期調整・受発注管理
-
-**Key Responsibilities**
-
-- Coordinated import/export operations.
-- Communicated with overseas customers and suppliers.
-- Prepared trade and shipping documentation.
-- Supported international business using English.
-- Coordinated delivery schedules and customer requirements.
-
-### 🏭 Global Quality Assurance
-### 品質保証
-
-**主な業務**
-
-- 国内外仕入先品質管理
-- APQP・PPAP対応
-- プロジェクト推進
-- KPI・進捗管理
-- 海外仕入先との英語コミュニケーション
-- 英語会議・通訳
-- 業務標準化・ドキュメント整備
-
-**Key Responsibilities**
-
-- Supplier Quality Management
-- APQP / PPAP Coordination
-- Cross-functional Project Coordination
-- KPI & Progress Management
-- Global communication with overseas suppliers
-- English meeting facilitation and interpretation
-- Documentation and process standardization
-
-### 💻 Manufacturing DX & Web Development
-### DX・Webアプリケーション開発
-
-現在取り組んでいること
+以下は職務経験とは別に、現在学習・実践している内容です。
 
 - LaravelによるWebアプリケーション開発
-- GitHubを活用した開発フロー
-- AIを活用した開発・DX
+- Git / GitHubを活用した開発フロー
+- 模擬案件での仕様確認、不具合調査・修正、テスト
+- AIを補助に活用しながら、設計意図やコードを理解する学習
 
-Currently learning and developing:
+Alongside my professional work, I am learning Laravel web development and Git/GitHub workflows through personal projects and a simulated development project. This includes clarifying specifications, investigating and fixing bugs, and testing. I use AI as an aid while developing the ability to understand and explain design decisions and code.
 
-- Laravel
-- PHP
-- MySQL
-- Docker
-- Git / GitHub
-- AI-assisted Development (ChatGPT / GitHub Copilot)
-
-
+---
 
 # 🚀 ポートフォリオ / Portfolio
 
@@ -191,7 +186,7 @@ Currently learning and developing:
 
 # 🎯 キャリアビジョン / Career Vision
 
-品質保証で培った現場経験とソフトウェア開発を組み合わせ、
+事務・貿易・製造業で培った実務経験とソフトウェア開発を組み合わせ、
 
 **「現場を理解し、ITの力で課題を解決できるエンジニア」**
 
@@ -199,7 +194,7 @@ Currently learning and developing:
 
 将来的には、製造業だけでなく、健康・暮らしを支えるサービス開発にも携わりたいと考えています。
 
-By combining Quality Assurance experience with software development, I aim to become an engineer who understands business operations and creates practical solutions through technology.
+By combining my experience in administrative, trade, and manufacturing operations with software development, I aim to become an engineer who understands business operations and creates practical solutions through technology.
 
 In the future, I hope to contribute to software that supports not only manufacturing but also wellness and everyday life.
 
